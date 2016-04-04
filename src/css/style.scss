@@ -1,0 +1,46 @@
+---
+---
+
+$f-ss: system, -apple-system, Roboto, sans-serif;
+$c-back: white;
+$c-front: #5E363F;
+
+a {
+  color: inherit;
+}
+
+html {
+  font-family: $f-ss;
+  color: $c-front;
+  background-color: $c-back;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 96vh;
+}
+
+h1 {
+  text-align: center;
+}
+
+.activities {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+
+  &--item {
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+    flex-grow: 1;
+    background: transparentize($c-front,.4);
+    background: linear-gradient(to bottom, transparentize($c-front,.4) 0%,transparentize($c-front,1) 20%);
+  }
+}
+
+footer {
+  text-align: center;
+  font-size: .8em;
+}

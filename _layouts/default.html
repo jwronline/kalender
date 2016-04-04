@@ -1,0 +1,33 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>{{page.title}}</title>
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+  <h1>{{page.title}}</h1>
+  <div class="activities">
+    {% for date in site.data.dates %}
+    <article class="activities--item">
+      <h2>{{date.name}}</h2>
+      <a data-type="{{date.type}}">{{date.type}}</a>
+      <p>{{date.uitleg}}</p>
+      <p>
+        <time datetime="{{ date.start }}">{{ date.start | date: %b %d }}</time>
+        <span> - </span>
+        <time datetime="{{ date.end }}">{{ date.end | date: %b %d }}</time>
+      </p>
+    </article>
+    {% endfor %}
+  </div>
+  <footer>
+    <p><a href="cal.ics">Voeg toe aan je kalender!</a></p>
+    <p>Code door <a href="https://haroen.me">Haroen</a>.</p>
+    <p>Terug naar <a href="/">Home</a></p>
+  </footer>
+</body>
+</html>

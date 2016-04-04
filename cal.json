@@ -1,0 +1,13 @@
+---
+---
+{"events":[
+{% for date in site.data.dates %}
+  {
+    "name"      : "{{date.name}}",
+    "start"     : "{{date.start}}",
+    "end"       : "{{date.end}}",
+    "venue"     : "Andromeda",
+    "address"   : "Mortierstraat 31, 8000 Brugge, België"
+  },
+{% endfor %}
+]}
